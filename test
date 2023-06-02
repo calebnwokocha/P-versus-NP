@@ -1,0 +1,19 @@
+def print_set_with_loop(numbers):
+    size = len(numbers)
+    
+    # Determine the number of prints based on the size of the set
+    num_of_prints = size ** 2  # Polynomial function (size squared)
+    # num_of_prints = 2 ** size  # Exponential function (2 raised to the power of size)
+    
+    print(f"Number of prints: {num_of_prints}")
+    print("Set elements:")
+    
+    for print_count in range(num_of_prints): 
+        print( f"Print {print_count} {numbers}")
+    
+# Ask the user for input
+input_str = input("Enter a set of numbers (space-separated): ")
+numbers = list(map(int, input_str.split()))
+
+# Call the function to print the set using the for loop
+print_set_with_loop(numbers)
